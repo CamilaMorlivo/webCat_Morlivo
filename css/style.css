@@ -3,6 +3,10 @@
 	margin: 0;
 	padding: 0;
 }
+
+
+/************************* INDEX *********************************/
+
 #IndexGrilla{
     
 	display: grid;
@@ -112,6 +116,30 @@ footer > div{
 	justify-content: center;
 	align-items: center;
 }
+
+/*Animaciones, transformaciones, etc */
+
+
+#botonAporte:hover{
+
+	transform: scaleY(0.9);
+}
+
+section#catsImg{
+	
+	position: relative;
+	animation: mymove 5s infinite;
+}
+  
+@keyframes mymove {
+	0%   {right: 0;}
+	25%  {right: -150px;}
+	75%  {right: 150px;}
+	100%  {right: -0;}
+}
+
+
+/************************* CONTACTO *********************************/
 
 #contactGrilla{
 
@@ -253,4 +281,37 @@ footer#footerContact > p{
 
 	}
 
+}
+
+/*Animaciones, transformaciones, etc */
+
+#contactBottom:hover{
+    
+    transform: scaleY(0.9);
+}
+
+#contactForm{
+	
+	position: relative;
+	animation: mymoveFormContact 2s;
+}
+  
+@keyframes mymoveFormContact {
+	0%   {top: 0;}
+	25%  {top: -200px;}
+	75%  {top: 200px;}
+	100%  {top: -0;}
+}
+
+#mapsUbi{
+	
+	position: relative;
+	animation: mymoveFormUbi 2s;
+}
+  
+@keyframes mymoveFormUbi {
+	0%   {top: -0;}
+	25%  {top: 200px;}
+	75%  {top: -200px;}
+	100%  {top: 0;}
 }
