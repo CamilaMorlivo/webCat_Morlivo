@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../img/IconCatWeb.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="../css/estilo.css">
+    <title>Formulario de Adopción</title>
+</head>
+<body>
+
+    <header>
+
+        <img width="100px" height="80px" src="../img/IconCatWeb.jpg">
+
+        <nav class="menu">
+     
+            <ul class="menu__ul">
+                <!-- "en_adopcion" te lleva a la pagina web n*5 -> formulario de adopcion "formulario.html"-->
+                <li><a href="en_adopcion.html">EN ADOPCIÓN</a></li> 
+                <li><a href="../index.html">INICIO</a></li>
+                <li><a href="contacto.html">CONTACTO</a></li>
+            </ul>  
+
+        </nav>
+
+    </header>
+    
+    <main class="mainFormulario">
+
+        <br><br><br>
+
+        <form class="mainFormulario__sectionForm" action="" method="" enctype="">
+
+            <h1>Formulario de Adopción</h1>
+            <article>
+                <label for="ident">Nombre y Apellido:</label>
+                <br>
+                <input type="text" name="ident" placeholder="Su respuesta"> 
+            </article>
+        
+            <article>
+                <label for="ubic">Domicilio y Localidad:</label>
+                <br>
+                <input type="text" name="ubic" placeholder="Su respuesta"> 
+            </article>
+
+            <article>
+                <label for="contact">Email o Celular:</label>
+                <br>
+                <input type="text" name="contact" placeholder="Su respuesta"> 
+            </article>
+
+            <article>
+                <label for="compo">Composición del grupo familiar y edades:</label>
+                <br>
+                <input type="text" name="compo" placeholder="Su respuesta"> 
+            </article>
+
+            <article>
+                <legend>¿Están todos de acuerdo en adoptar?</legend>
+
+                <input type="checkbox" name="si" value="Si">
+                <label for="si">Sí</label>
+                <input type="checkbox" name="no" value="No">
+                <label for="no">No</label>
+            </article>
+
+            <article>
+                <label for="michi">¿Qué gatito quisieras adoptar?</label>
+                <br>
+                <input type="text" name="michi" placeholder="Su respuesta"> 
+            </article>
+
+            <article>
+                <label for="vivienda">¿Vivienda: Alquilas o sos propietario? </label>
+                <br>
+                <input type="text" name="vivienda" placeholder="Su respuesta"> 
+            </article>
+
+            <article>
+                <label for="protecciones">¿Cuentan con protecciones en las aberturas? <br> De no ser así, ¿podrían costearlas? </label>
+                <br>
+                <input type="text" name="protecciones" placeholder="Su respuesta"> 
+            </article>
+
+            <input id="botonForm" type="submit" value="Enviar"> 
+
+        </form>
+
+        <br><br><br>
+
+    </main>
+    
+    <footer>
+        <hr>
+        <p>Author: WEBCat - ONG para michis callejeros. <a href="mailto:WEBCat2022@gmail.com">Contáctanos en WEBCat2022@gmail.com</a></p>
+    </footer> 
+    
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../img/IconCatWeb.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="../css/estilo.css">
+    <title>Registrarte</title>
+</head>
+<body>
+
+    <header>
+
+        <img width="100px" height="80px" src="../img/IconCatWeb.jpg">
+
+        <nav class="menu">
+     
+            <ul class="menu__ul">
+                <!-- "en_adopcion" te lleva a la pagina web n*5 -> formulario de adopcion "formulario.html"-->
+                <li><a href="en_adopcion.html">EN ADOPCIÓN</a></li> 
+                <li><a href="../index.html">INICIO</a></li>
+                <li><a href="contacto.html">CONTACTO</a></li>
+            </ul>  
+
+        </nav>
+
+    </header>
+
+    <main class="mainRegister">
+
+<br><br><br>
+        <form class="mainRegister__sectionFormRegister" action="" method="" enctype="">
+
+            <h1>REGISTRARTE</h1>
+
+            <label for="name">Ingrese su nombre:</label>
+            <input type="text" name="name" placeholder="Ingrese nombre"> <br>
+
+            <label for="lastname">Ingrese su apellido:</label>
+            <input type="text" name="lastname" placeholder="Ingrese apellido"> <br>
+
+            <label for="contact">Ingrese un contacto:</label>
+            <input id="contactRegister" type="text" name="contact" placeholder="Ingrese email o celular"> <br>
+
+            <label for="password">Ingrese contraseña:</label>    
+            <input type="password" name="password" placeholder="Ingrese contraseña"> <br>
+            
+            <label for="nacimiento">Fecha de nacimiento:</label>
+            <input type="date" name="nacimiento" value="2018-07-22" min="2000-01-01" max="2022-03-11">
+                        
+            <legend>Sexo:</legend>
+            <select>
+                <option value="Fem">Femenino</option>
+                <option value="Masc">Masculino</option>
+                <option value="Otro">Otro</option>
+            </select>
+
+            <a href="">Ya tienes cuenta? Inicia sesión aquí!</a>
+            <br>
+            <input id="botonRegister" type="submit" value="Enviar">  
+        </form>  
+
+        <br><br><br>
+        
+    </main>
+    
+    <footer class="footerRegister">
+        
+        <p>Author: WEBCat - ONG para michis callejeros. <a href="mailto:WEBCat2022@gmail.com">Contáctanos en WEBCat2022@gmail.com</a></p>
+    </footer> 
+    
+</body>
+</html>
