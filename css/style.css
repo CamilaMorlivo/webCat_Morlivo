@@ -45,6 +45,7 @@ div#foro{
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	align-items: center;
     font-family: 'Open Sans', sans-serif;
 	padding: 3% 25%;
 }
@@ -78,12 +79,16 @@ li a:hover {
     border-radius: 10px;
 }
 
+div#foro > h1{
+
+	text-align: center;
+}
 
 div#foro > article{
 
 	background-color: rgba(224, 183, 193, 0.993);
 	display: flex;
-	justify-content: start;
+	align-content: center;
     padding: 30px;
     margin-bottom: 15px;
 }
@@ -94,19 +99,24 @@ div#foro > article > a{
     color: #111;
 }
 
+div#foro > div{
+
+	justify-content: center;
+
+}
 div#foro > div > #cajaAporte{
 	
-    padding: 30px 36%;
+    padding: 30px;
     border: solid 1px black;
 	text-align: center;
 }
 
 div#foro > div > #botonAporte{
 
-    margin: 10px 41%;
     padding: 10px;
     background-color: rgb(204, 92, 126);
     border-radius: 10px;
+	margin-top: 15px;
 }
 
 footer > div{
@@ -114,8 +124,10 @@ footer > div{
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
-	align-items: center;
+	align-items: baseline;
 }
+
+
 
 /*Animaciones, transformaciones, etc */
 
