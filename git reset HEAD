@@ -1,0 +1,23 @@
+[33mcommit 0f37bb99815fdfb3f695627f780a78b94736673f[m[33m ([m[1;36mHEAD -> [m[1;32mAgregandoBootstrap[m[33m, [m[1;32mmain[m[33m)[m
+Author: Camila Morlivo <morlivocamila01@gmail.com>
+Date:   Wed Apr 13 20:52:12 2022 +0200
+
+    Agregando bootstrap a las paginas index.html y contacto.html
+
+[33mcommit d0ebf20601c4185c844ca66715e12e60a58383cd[m[33m ([m[1;31morigin/main[m[33m, [m[1;32mAnimacionesEnAdopcionFormularioRegistro[m[33m)[m
+Author: Camila Morlivo <morlivocamila01@gmail.com>
+Date:   Mon Apr 11 21:20:11 2022 +0200
+
+    Animaciones y transformaciones en las paginas en_adopcion, formulario y registro
+
+[33mcommit c159f7bbdeb8467887c3c341ec14f72b59024346[m[33m ([m[1;32mAnimacionesIndex[m[33m)[m
+Author: Camila Morlivo <morlivocamila01@gmail.com>
+Date:   Mon Apr 11 20:47:36 2022 +0200
+
+    Agregado de KeyFrames y transform en el index y contacto
+
+[33mcommit 9ef500ea9b70809edd2358d6fbd2ca5d2b7d1e21[m
+Author: Camila Morlivo <morlivocamila01@gmail.com>
+Date:   Mon Apr 11 14:59:58 2022 +0200
+
+    WebCat-Primer commit

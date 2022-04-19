@@ -5,114 +5,122 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../img/IconCatWeb.jpg" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" 
+    rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" 
+    crossorigin="anonymous">
     <link rel="stylesheet" href="../css/estilo.css">
     <title>Michis en Adopción</title>
 </head>
 <body>
 
-    <header>
+    <header id="headerIndex" class="row">
 
-        <img width="100px" height="80px" src="../img/IconCatWeb.jpg">
-
-        <nav class="menu">
-     
-            <ul class="menu__ul">
+        <img class="col-md-2 col-sm-2 col-lg-1" width="100px" height="80px" src="../img/IconCatWeb.jpg">
+    
+        <nav class="col-md-7 col-sm-8 col-lg-4">
+         
+            <ul>
                 <li><a href="../index.html">INICIO</a></li> 
                 <li><a href="registro.html">REGISTRARTE</a></li>
                 <li><a href="contacto.html">CONTACTO</a></li>
             </ul>  
-
+    
         </nav>
-
+    
     </header>
 
-    <main id="mainMichis">
+    <main id="mainCatsAdopcion">    
 
-        <br><br>     
+        <div class="row" id="catsAdoptionSec">
 
-        <section id="EnAdopcionSection" class="EnAdopcionSection">
+            <h1 id="EnAdopcionH1" class="col-lg-12">En Adopción</h1>
 
-            <h1 id="tituloAdopted">ACÁ PODRAS VER LOS MICHIS EN ADOPCIÓN!</h1>
-
-            <article class="EnAdopcionSection_Sakamoto">
-            <img width="250px" height="200px" src="../img/gatosEnAdopcion/NichijouSakamoto.jpg">
-            <p>
-                Sakamoto - Macho <br>
-                Gato negro que luce una bufanda roja. <br>
-                El iris de sus ojos es estrecho y vertical. <br>
-                Le gusta jugar mucho con juguetes u <br>
-                objetos pequeños, puede hablar como <br>
-                una persona. Es muy compañero y te <br>
-                cuida.
-            </p>
-
-            <a href="formulario.html">QUIERO ADOPTAR!</a> 
-
-            </article>
-
+            <p id="parrafoInfoCats" class="col-lg-12">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor, sit amet consectetur <br>
+            adipisicing elit. Distinctio eaque expedita aliquid sequi. Quas tempore vel Ipsam magnam, culpa <br>
+            esse amet labore non facere accusamus reprehenderit porro ipsa perferendis ex vero explicabo omnis <br>
+            nesciunt asperiores iusto quod inventore beataedignissimos, minus dolore, voluptatum aut minima <br>
+            itaque. mollitia recusandae laudantium soluta eos voluptatem?<br>
             <br>
+            </p>
             
-            <article class="EnAdopcionSection_Artemisa">
-            <img width="250px" height="200px" src="../img/gatosEnAdopcion/SailorMoonArtemis.jpg">
-            <p>
-                Artemisa - Macho <br>
-                Es un gato blanco, con grandes ojos <br>
-                azules y con una luna amarilla en <br>
-                la frente. Tiene los bigotes largos <br>
-                y finos.  <br>
-                Es un gato muy confiable y con <br>
-                mucha determinación, un poco miedoso <br>
-                también. <br>
-                Puede hablar como una persona
-            </p>
-            <a href="formulario.html">QUIERO ADOPTAR!</a> 
+            <article class="col-lg-5">
+                <img width="250px" height="200px" src="../img/gatosEnAdopcion/NichijouSakamoto.jpg">
+                <p>
+                    <b>Sakamoto - Macho</b> <br>
+                    Gato negro que luce una bufanda roja. <br>
+                    El iris de sus ojos es estrecho y vertical. <br>
+                    Le gusta jugar mucho con juguetes u <br>
+                    objetos pequeños, puede hablar como <br>
+                    una persona. Es muy compañero y te <br>
+                    cuida.
+                </p>
+                <a href="formulario.html" id="refFormAdoption">QUIERO ADOPTAR!</a> 
             </article>
 
-            <br>
-
-            <article class="EnAdopcionSection_Diana">
-            <img width="250px" height="200px" src="../img/gatosEnAdopcion/SailorMoonDiana.jpg">
-            <p>
-                Diana - Hembra <br>
-                Es una gata gris, con grandes ojos de <br>
-                color rojo y con una luna amarilla en <br>
-                la frente.  <br>
-                En general es muy respetuosa con todos <br>
-                pero traviesa ya que es chiquita. <br>
-                Aventurera, guía, compañera y puede <br>
-                hablar como una persona.
-            </p>
-            <a href="formulario.html">QUIERO ADOPTAR!</a> 
+            <article class="col-lg-5">
+                <img width="250px" height="200px" src="../img/gatosEnAdopcion/SailorMoonArtemis.jpg">
+                <p>
+                    <b>Artemisa - Macho</b> <br>
+                    Es un gato blanco, con grandes ojos <br>
+                    azules y con una luna amarilla en la <br>
+                    frente. Tiene los bigotes largos y finos.  <br>
+                    Es un gato muy confiable y con <br>
+                    mucha determinación, un poco miedoso <br>
+                    también. <br>
+                </p>
+                <a href="formulario.html" id="refFormAdoption">QUIERO ADOPTAR!</a> 
             </article>
 
-            <br>
-
-            <article class="EnAdopcionSection_Luna">
-            <img width="250px" height="200px" src="../img/gatosEnAdopcion/SailorMoonLuna.jpg">
-            <p>
-                Luna - Hembra<br>
-                Es una gata con un pelaje color violeta <br>
-                oscuro y tiene en la frente una marca en <br>
-                forma de Luna creciente de color amarillo. <br>
-                Sus ojos son un rojo ladrillo. <br>
-                Ella es de carácter tranquilo, responsable <br>
-                y preocupada. Le gusta mucho estar con <br>
-                personas al rededor y puede hablar como<br>
-                una persona.
-            </p>  
-            <a href="formulario.html">QUIERO ADOPTAR!</a>        
+            <article class="col-lg-5">
+                <img width="250px" height="200px" src="../img/gatosEnAdopcion/SailorMoonDiana.jpg">
+                <p>
+                    <b>Diana - Hembra </b><br>
+                    Es una gata gris, con grandes ojos de color  <br>
+                    rojo y con una luna amarilla en la frente.  <br>
+                    En general es muy respetuosa con todos <br>
+                    pero traviesa ya que es chiquita. <br>
+                    Aventurera, guía, compañera. <br>
+                </p>
+                <a href="formulario.html" id="refFormAdoption">QUIERO ADOPTAR!</a> 
             </article>
-           
-            <br>
 
-        </section>
+            <article class="col-lg-5">
+                <img width="250px" height="200px" src="../img/gatosEnAdopcion/SailorMoonLuna.jpg">
+                <p>
+                    <b>Luna - Hembra</b><br>
+                    Es una gata con un pelaje color violeta <br>
+                    oscuro y tiene en la frente una marca en <br>
+                    forma de Luna creciente de color amarillo. <br>
+                    Sus ojos son un rojo ladrillo. Ella es de <br>
+                    carácter tranquilo y responsable. Le gusta <br>
+                    mucho estar con personas alrededor. <br>
+                </p>  
+                <a href="formulario.html" id="refFormAdoption">QUIERO ADOPTAR!</a>        
+            </article>
+
+        </div>
 
     </main>
 
-    <footer>
-        <hr>
-        <p>Author: WEBCat - ONG para michis callejeros. <a href="mailto:WEBCat2022@gmail.com">Contáctanos en WEBCat2022@gmail.com</a></p>
+    <footer class="container-fluid">
+            
+        <div>
+            <img width="25" height="25px" src="../img/IconCatWeb.jpg">
+            <p> Author: WEBCat - ONG para michis callejeros. </p>
+            <p> Contáctanos en:</p>
+            <a href="mailto:WEBCat2022@gmail.com">WEBCat2022@gmail.com</a>
+        </div>
+            
     </footer> 
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" 
+    integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" 
+    crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" 
+    integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" 
+    crossorigin="anonymous"></script>
     
 </body>
 </html>
