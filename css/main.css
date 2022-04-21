@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+/************************* INDEX *********************************/
+header#headerIndex {
+  background-color: rgba(204, 92, 126, 0.541);
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 2%;
+  padding-top: 2%; }
+  header#headerIndex nav ul {
+    display: flex;
+    list-style-type: none;
+    overflow: hidden; }
+    header#headerIndex nav ul li a {
+      display: block;
+      color: black;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none; }
+      header#headerIndex nav ul li a:hover {
+        background-color: rgba(241, 212, 219, 0.904);
+        border-radius: 10px; }
+
+footer {
+  background-color: rgba(204, 92, 126, 0.541); }
+  footer div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: baseline;
+    color: black; }
+    footer div img {
+      position: relative;
+      top: 6px; }
+    footer div a {
+      text-decoration: none;
+      color: black; }
+
+main section#catsImg {
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+  position: relative;
+  animation: moveCats 5s infinite; }
+
+@keyframes moveCats {
+  0% {
+    right: 0; }
+  25% {
+    right: -150px; }
+  75% {
+    right: 150px; }
+  100% {
+    right: -0; } }
+
+main div#foro {
+  display: flex;
+  justify-content: center;
+  font-family: 'Libre Baskerville', serif;
+  padding: 3% 25%; }
+  main div#foro h1 {
+    text-align: center;
+    font-size: 50px; }
+  main div#foro article {
+    background-color: rgba(224, 183, 193, 0.993);
+    padding: 25px;
+    margin-bottom: 15px;
+    text-align: center; }
+    main div#foro article a {
+      text-decoration: none;
+      color: #111;
+      font-size: 23px; }
+  main div#foro div {
+    justify-content: center; }
+    main div#foro div #cajaAporte {
+      padding: 28px;
+      border: inherit 15px black;
+      text-align: center; }
+    main div#foro div #botonAporte {
+      padding: 10px;
+      background-color: #cc5c7e;
+      border-radius: 10px;
+      margin-top: 15px; }
+      main div#foro div #botonAporte:hover {
+        transform: scale(1.1, 1.1); }

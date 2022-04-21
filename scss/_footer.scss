@@ -1,0 +1,19 @@
+footer{
+	background-color: rgba(204, 92, 126, 0.541);
+    div{	
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: baseline;
+        color: black;
+        img{
+            position: relative;
+            top: 6px;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+        }
+    }
+
+}
