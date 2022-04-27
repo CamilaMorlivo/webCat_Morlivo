@@ -38,12 +38,25 @@ footer {
       text-decoration: none;
       color: black; }
 
-main section#catsImg {
-  display: flex;
-  justify-content: center;
-  margin-top: 25px;
-  position: relative;
-  animation: moveCats 5s infinite; }
+/*Aplicar un mapa, un mixin y un extend para 
+modificar cualquier elemento de nuestro sitio. */
+/*mapa*/
+/*Extend*/
+.articulo, main div#foro article {
+  background-color: rgba(224, 183, 193, 0.993);
+  padding: 25px;
+  margin-top: 15px;
+  margin-bottom: 15px; }
+
+/*Mixins*/
+main {
+  /*map-get*/ }
+  main section#catsImg {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+    position: relative;
+    animation: moveCats 5s infinite; }
 
 @keyframes moveCats {
   0% {
@@ -54,34 +67,31 @@ main section#catsImg {
     right: 150px; }
   100% {
     right: -0; } }
-
-main div#foro {
-  display: flex;
-  justify-content: center;
-  font-family: 'Libre Baskerville', serif;
-  padding: 3% 25%; }
-  main div#foro h1 {
-    text-align: center;
-    font-size: 50px; }
-  main div#foro article {
-    background-color: rgba(224, 183, 193, 0.993);
-    padding: 25px;
-    margin-bottom: 15px;
-    text-align: center; }
-    main div#foro article a {
-      text-decoration: none;
-      color: #111;
-      font-size: 23px; }
-  main div#foro div {
-    justify-content: center; }
-    main div#foro div #cajaAporte {
-      padding: 28px;
-      border: inherit 15px black;
+  main div#foro {
+    display: flex;
+    justify-content: center;
+    font-family: 'Libre Baskerville', serif;
+    padding: 3% 25%; }
+    main div#foro h1 {
+      text-align: center;
+      font-size: 50px; }
+    main div#foro article {
+      /*Extend*/
       text-align: center; }
-    main div#foro div #botonAporte {
-      padding: 10px;
-      background-color: #cc5c7e;
-      border-radius: 10px;
-      margin-top: 15px; }
-      main div#foro div #botonAporte:hover {
-        transform: scale(1.1, 1.1); }
+      main div#foro article a {
+        text-decoration: none;
+        color: #111;
+        font-size: 23px; }
+    main div#foro div {
+      justify-content: center; }
+      main div#foro div #cajaAporte {
+        padding: 28px;
+        border: inherit 15px black;
+        text-align: center; }
+      main div#foro div #botonAporte {
+        padding: 10px;
+        background-color: #cc5c7e;
+        border-radius: 10px;
+        margin-top: 15px; }
+        main div#foro div #botonAporte:hover {
+          transform: scale(1.1, 1.1); }

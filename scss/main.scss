@@ -8,12 +8,41 @@
 @import "header";
 @import "footer";
 
+/*Aplicar un mapa, un mixin y un extend para 
+modificar cualquier elemento de nuestro sitio. */
+
+/*mapa*/
+$section: ( 
+    pantalla: flex,
+    contenido: center,
+    margenTop: 25px,
+    posicion: relative
+); 
+
+/*Extend*/
+.articulo {
+    background-color: rgba(224, 183, 193, 0.993);
+    padding: 25px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+/*Mixins*/
+
+@mixin boton-aporte{        
+    padding: 10px;
+    background-color: rgb(204, 92, 126);
+    border-radius: 10px;
+    margin-top: 15px;
+}
+
 main{
+    /*map-get*/
     section#catsImg{
-        display: flex;
-        justify-content: center;
-        margin-top: 25px;
-        position: relative;
+        display: map-get($section,pantalla);
+        justify-content: map-get($section,contenido);
+        margin-top: map-get($section,margenTop);
+        position: map-get($section,posicion);
         animation: moveCats 5s infinite;
     }
 
@@ -34,9 +63,8 @@ main{
 	        font-size: 50px;
         }
         article{
-            background-color: rgba(224, 183, 193, 0.993);
-            padding: 25px;
-            margin-bottom: 15px;
+            /*Extend*/
+            @extend .articulo;
             text-align: center;
             a{
                 text-decoration: none;
@@ -53,11 +81,7 @@ main{
                 text-align: center;
             }
             #botonAporte{
-
-                padding: 10px;
-                background-color: rgb(204, 92, 126);
-                border-radius: 10px;
-                margin-top: 15px;
+                @include boton-aporte;
 
                 &:hover{
                     transform: scale(1.1, 1.1);
@@ -66,4 +90,5 @@ main{
         }
     }
 }
+
 
