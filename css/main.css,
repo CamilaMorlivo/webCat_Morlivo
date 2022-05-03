@@ -23,18 +23,18 @@ header#headerIndex {
         background-color: rgba(241, 212, 219, 0.904);
         border-radius: 10px; }
 
-#footerGenerico {
+#footerGenerico footer {
   background-color: rgba(204, 92, 126, 0.541); }
-  #footerGenerico div {
+  #footerGenerico footer div {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: baseline;
     color: black; }
-    #footerGenerico div img {
+    #footerGenerico footer div img {
       position: relative;
       top: 6px; }
-    #footerGenerico div a {
+    #footerGenerico footer div a {
       text-decoration: none;
       color: black; }
 
@@ -121,8 +121,6 @@ main div#foro {
 
 /* ////// FORMULARIO ADOPCIÓN ///////////////// */
 #sectionForm {
-  display: flex;
-  justify-content: center;
   position: relative;
   animation: moveForm 2s; }
 
@@ -136,6 +134,8 @@ main div#foro {
   100% {
     right: -0; } }
   #sectionForm .mainFormulario__sectionForm {
+    position: relative;
+    left: 450px;
     width: 500px;
     background-color: #83f1d9;
     border-radius: 15px;
@@ -167,8 +167,6 @@ main div#foro {
 /* ///////////////// REGISTRO ///////////////// */
 #sectionFormRegister {
   position: relative;
-  display: flex;
-  justify-content: center;
   animation: moveRegister 2s; }
 
 @keyframes moveRegister {
@@ -181,6 +179,8 @@ main div#foro {
   100% {
     right: -0; } }
   #sectionFormRegister .mainRegister__sectionFormRegister {
+    position: relative;
+    left: 450px;
     width: 500px;
     background-color: #83f1d9;
     border-radius: 15px;
@@ -220,115 +220,3 @@ main div#foro {
       margin-bottom: 40px; }
       #sectionFormRegister .mainRegister__sectionFormRegister #botonRegister:hover {
         transform: scaleY(0.9); }
-
-/************************* CONTACTO *********************************/
-section#contactForm {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  font-family: 'Libre Baskerville', serif;
-  position: relative;
-  animation: moveFormContact 2s; }
-
-@keyframes moveFormContact {
-  0% {
-    top: 0; }
-  25% {
-    top: -200px; }
-  75% {
-    top: 200px; }
-  100% {
-    top: -0; } }
-  section#contactForm form {
-    display: flex;
-    flex-direction: column;
-    background-color: #83f1d9;
-    padding: 50px;
-    border-radius: 10px;
-    border: 2px solid black;
-    margin-bottom: 55px;
-    margin-top: 55px; }
-    section#contactForm form h2 {
-      text-align: center;
-      margin-bottom: 20px; }
-    section#contactForm form input {
-      padding: 10px;
-      margin-top: 5px;
-      margin-bottom: 20px; }
-    section#contactForm form #contactBottom {
-      position: relative;
-      left: 20%;
-      width: 200px;
-      background-color: #cc5c7e;
-      border-radius: 10px; }
-      section#contactForm form #contactBottom:hover {
-        transform: scale(1.1, 1.1); }
-
-aside#mapsUbi {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-family: 'Libre Baskerville', serif;
-  margin-top: 94px;
-  position: relative;
-  animation: moveMapsUbi 2s; }
-
-@keyframes moveMapsUbi {
-  0% {
-    top: -0; }
-  25% {
-    top: 200px; }
-  75% {
-    top: -200px; }
-  100% {
-    top: 0; } }
-
-#footerContact {
-  padding: 30px;
-  background-color: rgba(204, 92, 126, 0.541); }
-  #footerContact section {
-    display: flex;
-    justify-content: center;
-    align-items: center; }
-  #footerContact aside {
-    display: flex;
-    justify-content: center;
-    align-items: center; }
-
-@media (max-width: 768px) {
-  main > #mapsUbi > h2 {
-    font-size: 17px; }
-  .iframe {
-    width: 250px;
-    height: 250px; }
-  section#contactForm > form {
-    width: 250px;
-    height: 550px;
-    font-size: 14px; }
-  section#contactForm > form > h2 {
-    font-size: 17px; }
-  section#contactForm > form > #contactBottom {
-    padding: 2px;
-    width: 100px;
-    margin-top: 15px; } }
-
-@media (max-width: 992px) and (min-width: 768px) {
-  main > #mapsUbi > h2 {
-    font-size: 17px; }
-  .iframe {
-    width: 300px;
-    height: 300px; }
-  section#contactForm > form {
-    width: 300px;
-    height: 550px;
-    font-size: 14px; }
-  section#contactForm > form > h2 {
-    font-size: 20px; }
-  section#contactForm > form > #contactBottom {
-    width: 120px;
-    margin-top: 15px; } }
-
-@media (min-width: 1200px) {
-  .iframe {
-    width: 600px;
-    height: 450px; } }
