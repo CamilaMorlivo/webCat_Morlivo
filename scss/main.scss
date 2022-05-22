@@ -80,16 +80,22 @@ $pinkColor: rgba(224, 183, 193, 0.993);
     }
 }
 
+
+
 /************************* INDEX *********************************/
 
 main#mainIndex{
 
     section{
-        @include flex-justify-center;
         position: relative;
-        animation: moveElementRight 5s infinite;
+        animation: moveCats 3s infinite;
 
-        @include animationRight;
+        @keyframes moveCats{
+            0% {right: 0;}
+            50%{right: -260px;}
+            75%{right: 125}
+            100%{right: 0px}
+        }
 
         img{
             margin-top: 15px;

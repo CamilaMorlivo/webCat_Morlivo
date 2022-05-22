@@ -48,20 +48,18 @@ header {
 
 /************************* INDEX *********************************/
 main#mainIndex section {
-  display: flex;
-  justify-content: center;
   position: relative;
-  animation: moveElementRight 5s infinite; }
+  animation: moveCats 3s infinite; }
 
-@keyframes moveElementRight {
+@keyframes moveCats {
   0% {
     right: 0; }
-  25% {
-    right: -150px; }
+  50% {
+    right: -260px; }
   75% {
-    right: 150px; }
+    right: 125; }
   100% {
-    right: -0; } }
+    right: 0px; } }
   main#mainIndex section img {
     margin-top: 15px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.87); }
