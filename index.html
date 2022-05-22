@@ -19,50 +19,61 @@
 </head>
 <body>
 
-    <header id="headerIndex" class="row">
-
+    <header>
         <img class="col-md-2 col-sm-2 col-lg-1" width="100px" height="80px" src="img/IconCatWeb.jpg">
-    
-        <nav class="col-md-7 col-sm-8 col-lg-5">
-         
-            <ul>
-                <li><a href="paginasWeb/en_adopcion.html">EN ADOPCIÓN</a></li> 
-                <li><a href="paginasWeb/registro.html">REGISTRARTE</a></li>
-                <li><a href="paginasWeb/contacto.html">CONTACTO</a></li>
-            </ul>  
-    
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-12">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="paginasWeb/en_adopcion.html">EN ADOPCIÓN</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="paginasWeb/registro.html">REGISTRARTE</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="paginasWeb/contacto.html">CONTACTO</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
-    
     </header>
+
+    <main id="mainIndex"> 
     
-    <main> 
-    
-        <section class="container-fluid" id="catsImg" >
+        <section class="container-fluid">
             <img width="250px" height="200px" src="img/gatosEnAdopcion/NichijouSakamoto.jpg">
             <img width="250px" height="200px" src="img/gatosEnAdopcion/SailorMoonDiana.jpg">
             <img width="250px" height="200px" src="img/gatosEnAdopcion/SailorMoonLuna.jpg">
             <img width="250px" height="200px" src="img/gatosEnAdopcion/SailorMoonArtemis.jpg">
         </section>                         
 
-        <div class="row" id="foro">
+        <div class="row">
 
-            <h1 class="col-md-12"><b>FORO</b></h1>
+            <h1 class="col-md-12 col-sm-12 col-lg-12"><b>FORO</b></h1>
+
+            <!--La idea a futuro es que estos aportes sean publicaciones 
+            linkeadas de la misma pagina hechas por los mismxs usuarixs-->
                 
-            <article class="col-md-12">
+            <article class="col-md-12 col-sm-12 col-md-12">
                 <a href="https://www.cdc.gov/rabies/es/prevencion/index.html">Prevención de la rabia</a>  
             </article>
         
-            <article class="col-md-12">
+            <article class="col-md-12 col-sm-12 col-md-12">
                 <a href="https://www.abc.es/ciencia/abci-beneficios-cientificamente-comprobados-musica-para-gatos-202002261647_noticia.html">Beneficios de la música en gatos</a>
             </article>
         
-            <article class="col-md-12">
+            <article class="col-md-12 col-sm-12 col-md-12">
                 <a href="https://pet-salud.com.ar/radioterapia-del-dolor/">Los signos de dolor mas comunes en gatos</a>
             </article>
                 
-            <div class="row">
-                <input id="cajaAporte" type="text" name="aporte_foro" placeholder="Ingrese su aporte aquí">
-                <input class="col-md-5" id="botonAporte" type="submit" value="ENVIAR APORTE">
+            <div class="col-md-12 col-sm-12 col-lg-12">
+                <input class="col-lg-12" id="cajaAporte" type="text" name="aporte_foro" placeholder="Ingrese su aporte aquí">
+                <input class="col-lg-6" id="botonAporte" type="submit" value="ENVIAR APORTE">
             </div>          
         
         </div>

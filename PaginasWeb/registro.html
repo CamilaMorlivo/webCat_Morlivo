@@ -19,41 +19,50 @@
 </head>
 <body>
 
-    <header id="headerIndex" class="row">
-
+    <header>
         <img class="col-md-2 col-sm-2 col-lg-1" width="100px" height="80px" src="../img/IconCatWeb.jpg">
-    
-        <nav class="col-md-7 col-sm-8 col-lg-5">
-         
-            <ul>
-                <li><a href="en_adopcion.html">EN ADOPCIÓN</a></li> 
-                <li><a href="../index.html">INICIO</a></li>
-                <li><a href="contacto.html">CONTACTO</a></li>
-            </ul>  
-    
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid">
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-12">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="en_adopcion.html">EN ADOPCIÓN</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="../index.html">INICIO</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="contacto.html">CONTACTO</a>
+                </li>
+                </ul>
+            </div>
+            </div>
         </nav>
-    
     </header>
 
-    <main class="mainRegister">
+    <main id="mainRegister">
 
-        <section id="sectionFormRegister">
+        <section>
 
-            <form class="mainRegister__sectionFormRegister" action="" method="" enctype="">
+            <form action="" method="" enctype="">
 
-                <h1>Registrate</h1>
+                <h1>CREA UNA <strong>CUENTA</strong></h1>
     
-                <label for="name">Ingrese su nombre:</label>
-                <input type="text" name="name" placeholder="Ingrese nombre"> <br>
+                <label for="name">Ingrese su nombre*</label>
+                <input type="text" name="name"> <br>
     
-                <label for="lastname">Ingrese su apellido:</label>
-                <input type="text" name="lastname" placeholder="Ingrese apellido"> <br>
+                <label for="lastname">Ingrese su apellido*</label>
+                <input type="text" name="lastname"> <br>
     
-                <label for="contact">Ingrese un contacto:</label>
-                <input id="contactRegister" type="text" name="contact" placeholder="Ingrese email o celular"> <br>
+                <label for="contact">Ingrese un contacto*</label>
+                <input type="text" name="contact"> <br>
     
-                <label for="password">Ingrese contraseña:</label>    
-                <input type="password" name="password" placeholder="Ingrese contraseña"> <br>
+                <label for="password">Ingrese contraseña*</label>    
+                <input type="password" name="password" > <br>
                 
                 <label for="nacimiento">Fecha de nacimiento:</label>
                 <input type="date" name="nacimiento" value="2018-07-22" min="2000-01-01" max="2022-03-11">

@@ -4,454 +4,819 @@
 	padding: 0;
 }
 
-@import "header";
+body{
+    background-image: url(../img/Fondo.jpg);
+}
 
 #footerGenerico{
     background-color: rgba(204, 92, 126, 0.541);
     @import "footer";
 }
 
-/************************* INDEX *********************************/
+@import "header";
 
-$section: ( 
-    pantalla: flex,
-    contenido: center,
-    margenTop: 25px,
-    posicion: relative
-); 
+$titleFont: 'Libre Baskerville', serif;
+$textFont: 'Roboto', sans-serif;
+$backgroundColor: rgb(204, 92, 126);
+$backgroundFormColor: rgba(89, 224, 213, 0.445);
+$boxShadow: 0 4px 10px rgba(0, 0, 0, 0.87);
+$boderButton: solid 3px rgba(71, 66, 66, 0.637);
+$transition: all 500ms ease-out;
+$white: #FFF;
+$black: #000000;
+$pinkColor: rgba(224, 183, 193, 0.993);
 
-.articulo {
-    background-color: rgba(224, 183, 193, 0.993);
-    padding: 25px;
-    margin-top: 15px;
-    margin-bottom: 15px;
-}
-@mixin boton-aporte{        
-    padding: 10px;
-    background-color: rgb(204, 92, 126);
+@mixin boton{        
+    padding: 15px;
+    background-color: $pinkColor;
     border-radius: 10px;
     margin-top: 15px;
+    border: none;
+    transition: 0.1s;
+    box-shadow: $boxShadow;
 }
 
-main{
-    section#catsImg{
-        display: map-get($section,pantalla);
-        justify-content: map-get($section,contenido);
-        margin-top: map-get($section,margenTop);
-        position: map-get($section,posicion);
-        animation: moveCats 5s infinite;
+@mixin buttonHover{
+    &:hover{
+        background-color: $backgroundColor;
     }
+}
 
-    @keyframes moveCats {
+@mixin flex-justify-center{
+    display:flex;
+    justify-content:center;
+}
+
+
+@mixin properties($width,$marginBottom,$marginTop,$fontFamily, $height, $boderButton, $position, $color, $borderRadius, $fontSize, $colorFondo){
+    width: $width;
+    margin-bottom: $marginBottom;
+    margin-top: $marginTop;
+    font-family: $fontFamily;
+    height: $height;
+    border-bottom: $boderButton;
+    position: $position;
+    color: $color;
+    border-radius: $borderRadius;
+    font-size: $fontSize;
+    background-color: $colorFondo; 
+}
+
+@mixin animationTop {
+    @keyframes moveElementTop {
+        0%   {top: 0;}
+        25%  {top: 200px;}
+        75%  {top: -200px;}
+        100%  {top: -0;}
+    }
+}
+
+@mixin animationRight{
+    @keyframes moveElementRight{
         0%   {right: 0;}
         25%  {right: -150px;}
         75%  {right: 150px;}
         100%  {right: -0;}
     }
+}
 
-    div#foro{
-        display: flex;
-        justify-content: center;
-        font-family: 'Libre Baskerville', serif;
+/************************* INDEX *********************************/
+
+main#mainIndex{
+
+    section{
+        @include flex-justify-center;
+        position: relative;
+        animation: moveElementRight 5s infinite;
+
+        @include animationRight;
+
+        img{
+            margin-top: 15px;
+            box-shadow: $boxShadow;;
+        }
+    }  
+
+    div{
+        @include flex-justify-center;
+        font-family: $textFont;
         padding: 3% 25%;
+
         h1{
+            font-family: $titleFont;
             text-align: center;
 	        font-size: 50px;
         }
-        article{
-            @extend .articulo;
+
+        article{    
+            @include properties(null, 15px, 15px, null, null, null, null, null, 15px, null, $pinkColor);
+            padding: 25px;
             text-align: center;
+            box-shadow: $boxShadow;
+            transition: 0.1s;
+            
+            &:hover{
+                background-color: $backgroundColor;
+                box-shadow: $boxShadow;;
+                transition: $transition;
+                transform: scale(1.1, 1.1);
+            }
+
             a{
                 text-decoration: none;
-                color: #111;
+                color: $black;
                 font-size: 23px;
             }
         }
-        div{
-            justify-content: center;
-            #cajaAporte{
-	
-                padding: 28px;
-                border: inherit 15px black;
-                text-align: center;
-            }
-            #botonAporte{
-                @include boton-aporte;
 
-                &:hover{
-                    transform: scale(1.1, 1.1);
-                }
+        div{
+            @include flex-justify-center;
+            flex-direction: column;
+            #cajaAporte{
+                @include properties(100%, null, null, null, 50px, null, null, null, 15px, null, null);
+                border: none;
+                text-align: center;               
+                transition: $transition;
+                box-shadow: $boxShadow; 
+            }
+
+            #botonAporte{
+                @include boton;
+                @include buttonHover;            
+                
             }
         }
     }
 }
 
-
 /* /////////////////// MICHIS EN ADOPCIÓN ///////////////// */
 
-#mainCatsAdopcion{
-	display: flex;
-	justify-content: center;
+#mainCatsAdopcion{  
+    @include flex-justify-center;
 
-    #catsAdoptionSec{
-
-        justify-content: center;
-        font-family: 'Libre Baskerville', serif;
-        text-align: center;
-        font-size: 18px;
-        width: 800px;
-
-        #EnAdopcionH1{
-            position: relative;
-            top: 20px;
-            
+    section{ 
+        @include flex-justify-center;
+        @include properties(800px, 30px, null, null, null, $boderButton, null, null, null, 18px, null);
+        
+        h1{
+            @include properties(null, null, 25px, $titleFont, null, null, null, null, null, null, null);
+            text-align: center;
         }
 
-        #parrafoInfoCats{
-            margin-top: 25px;
-            margin-bottom: 45px;
-            border-bottom: solid 3px rgba(71, 66, 66, 0.637);
-            
+        #parrafoInicial{   
+            @include properties(null, 45px, 25px, $textFont, null, $boderButton, null, null, null, null, null);
         }
 
-        article{
+        div{
+            @include flex-justify-center;
+            @include properties(300px, 20px, null, null, 250px, null, null, null, null, null, null);       
+            align-items: center;
 
-            margin-bottom: 35px;
-
-            #refFormAdoption{
-                text-decoration: none;
-                color: #111;
-                background-color: rgb(214, 55, 103);
-                border-radius: 15px;
-                padding: 10px;
-                margin-top: 25px;
+            figure{
+                @include properties(300px, null, null, null, 250px, null, relative, null, 15px, null, null); 
+                overflow: hidden;
+                box-shadow: $boxShadow;
+                cursor: pointer;  
             }
 
-            a:hover {
-    
-                font-size: 20px;
+            img{
+                @include properties(100%, null, null, null, 100%, null, null, null, null, null, null);
+                transition: $transition;         
             }
 
+            div{
+                @include properties(100%, null, null, null, 100%, null, absolute, null, null, null, rgba(15, 18, 19, 0.781));
+                display: flex;
+                flex-direction: column;
+                top: 0;
+                transition: $transition; 
+                opacity: 0;
+                text-align: center; 
+                &:hover{
+                    opacity: 1;
+                    visibility: visible;
+                }
+
+                h3{
+                    @include properties(null, null, null, $titleFont, null, null, null, $white, null, null, null);
+                }
+
+                p{
+                    @include properties(null, null, null, $textFont, null, null, null, $white, null, null, null);
+                    line-height: 1.5;
+                    margin: auto;
+                }
+            }
+        }
+
+        a{
+            @include boton;
+            @include buttonHover;
+            @include properties(220px, 25px, null, $textFont, null, null, null, $black, null, 18px, null);
+            text-decoration: none;
+            text-align: center;
         }
     }
 }
 
 /* ////// FORMULARIO ADOPCIÓN ///////////////// */
 
-#sectionForm{
-
-    display: flex;
-    justify-content: center;
-    position: relative;
-	animation: moveForm 2s;
-
-    @keyframes moveForm {
-        0%   {right: 0;}
-        25%  {right: -200px;}
-        75%  {right: 200px;}
-        100%  {right: -0;}
-    }
-
-    .mainFormulario__sectionForm{
-
-        width: 500px;
-        background-color: rgb(131, 241, 217);
-        border-radius: 15px;
-        border: 1px solid black;
-        margin-top: 35px;
-        margin-bottom: 35px;
-        font-family: 'Libre Baskerville', serif;
-          
-        #h1Adoption{
-
-            margin-top: 15px;
-            font-size: 35px;
-
-        }
-
-        h1{
-
-            position: relative;
-            left: 90px;
-            margin-bottom: 25px;
-        }
-
-        article{
-
-            text-align: center;
-            input{
-
-                padding-right: 150px;
-            }
-        }
-
-        #botonForm{
-
-            position: relative;
-            left: 200px;
-            padding: 10px 25px;
-            background-color: rgb(204, 92, 126);
-            margin-bottom: 20px;
-            border-radius: 10px;
-            &:hover{
-    
-                transform: scale(1.1, 1.1);
-            }
-        }
-    }
-}
-
-
-/* ///////////////// REGISTRO ///////////////// */
-#sectionFormRegister{
-
-    position: relative;
-    display: flex;
-    justify-content: center;
-	animation: moveRegister 2s;
-
-    @keyframes moveRegister {
-        0%   {right: 0;}
-        25%  {right: -200px;}
-        75%  {right: 200px;}
-        100%  {right: -0;}
-    }
-
-    .mainRegister__sectionFormRegister{
-        width: 500px;
-        background-color: rgb(131, 241, 217);
-        border-radius: 15px;
-        border: 1px solid black;
-        font-family: 'Libre Baskerville', serif;
-        margin-top: 35px;
-        margin-bottom: 35px;
-        text-align: center;
-
-        h1{
-
-            position: relative;
-            margin-bottom: 10px;
-            margin-top: 15px;
-        }
-
-        label{
-
-            position: relative;
-            
-        }
-
-        label, input{
-
-            padding: 10px;
-            margin-top: 20px;
-            margin-bottom: 20px;
-        }
-
-        input{
-
-            position: relative;
-            padding-right: 100px;
-            border-radius: 9px;
-        }
-
-        legend{
-
-            position: relative;
-            left: 20px;
-            top: 15px;
-        
-
-        }
-        select{
-
-            position: relative;
-            bottom: 3px;
-            left: 60px;
-        }
-
-        a{
-
-            text-decoration: none;
-            color: #111;
-        }
-
-        #botonRegister{
-
-            padding: 10px 25px;
-            background-color: rgb(204, 92, 126);
-            margin-bottom: 40px;
-
-            &:hover {
-    
-                transform: scaleY(0.9);
-            }
-        }
-    }
-
-}
-
-/************************* CONTACTO *********************************/
-
-section#contactForm{
-
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    font-family: 'Libre Baskerville', serif;
-    position: relative;
-	animation: moveFormContact 2s;
-
-    @keyframes moveFormContact {
-        0%   {top: 0;}
-        25%  {top: -200px;}
-        75%  {top: 200px;}
-        100%  {top: -0;}
-    }
-    
-    form{
-
-        display: flex;
-        flex-direction: column;
-        background-color: rgb(131, 241, 217);
-        padding: 50px;
-        border-radius: 10px;
-        border: 2px solid black;
-        margin-bottom: 55px;
-        margin-top: 55px;
-
-        h2{
-
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        input{
-
-            padding: 10px;
-            margin-top: 5px;
-            margin-bottom: 20px;
-        }
-
-        #contactBottom{
-
-            position: relative;
-            left: 20%;
-            width: 200px;
-            background-color: rgb(204, 92, 126);
-            border-radius: 10px;
-
-            &:hover{
-        
-                transform: scale(1.1, 1.1);
-            }
-        }
-    }
-}
-
-
-aside#mapsUbi{
-
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	font-family: 'Libre Baskerville', serif;
-	margin-top: 94px;
-    position: relative;
-	animation: moveMapsUbi 2s;
-
-    @keyframes moveMapsUbi {
-        0%   {top: -0;}
-        25%  {top: 200px;}
-        75%  {top: -200px;}
-        100%  {top: 0;}
-    }
-
-}
-
-  
-
-
-#footerContact{		
-	padding: 30px;
-	background-color: rgba(204, 92, 126, 0.541);
+main#mainFormulario{
 
     section{
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flex-justify-center;
+        position: relative;
+        animation: moveElementRight 2s;
+
+        @include animationRight;
+    
+        form{
+            @include properties(500px, 35px, 35px, $textFont, 850px, null, null, null, 15px, null, $backgroundFormColor);
+            box-shadow: $boxShadow;
+            h1{
+                @include properties(null, 25px, 15px, $titleFont, null, null, relative, null, null, 30px, null);
+                left: 45px;
+            }
+
+            article{
+                @include properties(null, 10px, 15px, null, null, null, null, null, null, null, null);
+                text-align: center;
+                
+                input{
+                    padding-bottom: 15px;
+                    padding-right: 170px;
+                    border-radius: 15px;
+                }
+            }
+
+            input#botonSend{
+                position: relative;
+                left: 130px;
+                @include buttonHover;
+                @include boton;
+            }
+        }
     }
 
     aside{
+        @include properties(600px, null, 65px, $titleFont, 400px, null, relative, null, 25px, null, rgba(224, 183, 193, 0.747));
         display: flex;
-        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        box-shadow: $boxShadow;
+        animation: moveElementTop 2s;
+
+        @include animationTop;
+
+        img{
+            @include properties(null, 15px, 30px, null, null, null, null, null, null, null, null);
+            box-shadow: $boxShadow;;
+        }
+
+        p{
+            @include properties(null, null, null, $textFont, null, null, null, null, null, 16px, null);
+        }
+
+    }
+}
+
+/* ///////////////// REGISTRO ///////////////// */
+
+main#mainRegister{
+    section{
+        @include flex-justify-center;
+        position: relative;
+        animation: moveElementRight 2s;
+
+        @include animationRight;
+
+        form{
+            @include properties(500px, 35px, 35px, $textFont, null, null, null, null, 15px, null, $backgroundFormColor);
+            text-align: center;
+            box-shadow: $boxShadow;
+            h1{
+                @include properties(null, 10px, 15px, $titleFont, null, null, relative, null, null, null, null);
+            }
+
+            label{
+                position: relative;    
+            }
+
+            label, input{
+                padding: 10px;
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
+
+            input{
+                position: relative;
+                padding-right: 100px;
+                border-radius: 9px;
+            }
+
+            legend{
+                position: relative;
+                left: 20px;
+                top: 15px; 
+            }
+
+            select{
+                position: relative;
+                bottom: 3px;
+                left: 60px;
+            }
+
+            a{
+                text-decoration: none;
+                color: $black;
+            }
+
+            #botonRegister{
+                @include boton;
+                @include buttonHover;
+                width: 200px;
+            }
+        }
+
+    }
+}
+/************************* CONTACTO *********************************/
+
+main#mainContact{
+    div{
+        margin-top: 50px;
+        background-color: #807b7f9f;
+        padding: 25px;
+        box-shadow: $boxShadow;;
+        h1{
+            
+            text-align: center;
+            color: $black;
+            font-size: 220%;
+        }
+    }
+    
+    section{
+        @include flex-justify-center;
+        @include properties(null, null, null, $titleFont, null, null, relative, null, null, null, null);
+        flex-direction: row;
+        animation: moveFormContact 2s;
+
+        @keyframes moveFormContact{
+        0%   {top: 0;}
+        25%  {top: -200px;}
+        75%  {top: 200px;}
+        100%  {top: 0;}
+    }
+        
+        form{
+            @include properties(null, 55px, 55px, $textFont, null, null, null, null, 15px, null, $backgroundFormColor );
+            display: flex;
+            flex-direction: column;
+            padding: 25px;
+            box-shadow: $boxShadow;
+
+            h6{
+                width: 500px;
+            }
+            input{
+                @include properties(null, 20px, 5px, null, null, null, null, null, 10px, null, null);
+                padding: 10px;
+            }
+
+            textarea{
+                border-radius: 10px;
+                text-decoration: none;
+            }
+
+            p{
+                position: relative;
+                left: 12px;
+            }
+            #contactBottom{
+                @include boton;
+                @include buttonHover;
+            }
+        }
+    }
+
+    aside{
+        @include properties(600px, null, 65px, $titleFont, 600px, null, relative, null, 25px, null, rgba(224, 183, 193, 0.747));
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        box-shadow: $boxShadow;
+        animation: moveElementTop 2s;
+
+        @include animationTop;
+
+        iframe{
+            margin-top: 50px;
+        }
+    }
+
+}
+
+div#footerContact{		
+	padding: 30px;
+	background-color: rgba(204, 92, 126, 0.541);
+    font-family: $textFont;
+    section{
+        @include flex-justify-center;
+        align-items: center;
+        
+    }
+
+    aside{
+        @include flex-justify-center;
         align-items: center;
     }
 }
 
 
-@media (max-width:768px){
-	main > #mapsUbi > h2 {
+//  *********** RESPONSIVE INDEX **************** //
 
-		font-size: 17px;
-	}
+@media (min-width:993px){
 
-	.iframe{
-		width: 250px; 
-		height: 250px; 
-	}
+    main#mainIndex > div > div{
+        width: 550px;
+        height: 150px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
-	section#contactForm > form{
+    main#mainIndex > div > div > #cajaAporte{
+        width: 530px;
+        height: 60px;
+    }
 
-		width: 250px; 
-		height: 550px;
-		font-size: 14px;
-	}
-
-	section#contactForm > form > h2{
-		font-size: 17px;		
-	}
-
-	section#contactForm > form > #contactBottom{
-		padding: 2px;
-		width: 100px;
-		margin-top: 15px;
-	}
-
-}	
-
-@media (max-width:992px) and (min-width: 768px) {
-	main > #mapsUbi > h2 {
-
-		font-size: 17px;
-	}
-
-	.iframe{
-		width: 300px; 
-		height: 300px; 
-	}
-
-	section#contactForm > form{
-
-		width: 300px; 
-		height: 550px;
-		font-size: 14px;
-	}
-
-	section#contactForm > form > h2{
-		font-size: 20px;		
-	}
-
-	section#contactForm > form > #contactBottom{
-		width: 120px;
-		margin-top: 15px;
-	}
-
-}	
-
-@media (min-width: 1200px) {
-	.iframe{
-		width: 600px; 
-		height: 450px; 
-	}
+    main#mainIndex > div > div > #botonAporte{
+        width: auto;
+        height: auto;
+        text-align: center;
+        font-size: 15px;
+    }
 }
 
+@media (min-width:680px) and (max-width:992px){
+
+    main#mainIndex > section{
+		width: 200px;
+    }
+
+	main#mainIndex > section > img{
+		width: 125;
+        height: 100px;
+    }
+
+    main#mainIndex > div > h1{
+        font-size: 37px;
+    }
+
+    main#mainIndex > div > article > a{
+        font-size: 18px;
+    }
+
+    main#mainIndex > div > div{
+        width: 500px;
+        height: 150px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    main#mainIndex > div > div > #cajaAporte{
+        width: 375px;
+        height: 60px;
+    }
+
+    main#mainIndex > div > div > #botonAporte{
+        width: auto;
+        height: auto;
+        text-align: center;
+        font-size: 15px;
+    }
+
+}	
+
+@media (max-width:680px){
+
+	main#mainIndex > section > img{
+		width: 100px;
+        height: 100px;
+    }
+
+    main#mainIndex > div > h1{
+        font-size: 35px;
+    }
+
+    main#mainIndex > div > article > a{
+        font-size: 15px;
+    }
+
+    main#mainIndex > div > div{
+        width: 300px;
+        height: 150px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    main#mainIndex > div > div > #cajaAporte{
+        width: 275px;
+        height: 60px;
+    }
+
+    main#mainIndex > div > div > #botonAporte{
+        width: auto;
+        height: auto;
+        text-align: center;
+        font-size: 10px;
+    }
+
+
+    #footerGenerico{
+        font-size: 11px;
+    }
+}	
+
+//  *********** RESPONSIVE MICHIS EN ADOPCIÓN **************** // -> CHECK
+
+@media (min-width:993px){
+    main#mainCatsAdopcion > section > #divQuieroAdoptar{
+        height: 100px;
+    }
+}
+@media (max-width:992px){
+
+    main#mainCatsAdopcion > section > h1{
+        font-size: 35px;
+    }
+
+    main#mainCatsAdopcion > section > #parrafoInicial{
+        font-size: 20px;
+    }
+
+    main#mainCatsAdopcion > section > div{    
+        width: 300px;
+        height: 250px;
+        margin-bottom: 15px;
+    }
+
+    main#mainCatsAdopcion > section > #divQuieroAdoptar{    
+        font-size: 15px;
+        height: 100px;
+    }
+}	
+
+@media (max-width:680px){
+
+    main#mainCatsAdopcion > section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    main#mainCatsAdopcion > section > h1{
+        font-size: 25px;
+    }
+
+    main#mainCatsAdopcion > section > #parrafoInicial{
+        font-size: 15px;
+    }
+
+    main#mainCatsAdopcion > section > div {
+        margin-bottom: 0px;
+        margin-top: 0px;
+    }
+
+    main#mainCatsAdopcion > section > div > figure {
+        width: 100%;
+        height: 100%;
+        margin-bottom: auto;
+    }
+
+    main#mainCatsAdopcion > section > div{      
+        width: 200px;
+        height: 150px;
+        font-size: 12px;
+        margin-bottom: 15px;
+    }
+
+    main#mainCatsAdopcion > section > div > a{      
+        font-size: 15px;
+    }
+}
+
+
+//  *********** RESPONSIVE FORMULARIO DE ADOPCIÓN **************** //
+
+@media (min-width:400px) and (max-width:768px){
+
+    main#mainFormulario > section{
+        font-size: 13px; 
+        height: 800px;
+        background-color: $backgroundFormColor;
+    }
+
+    main#mainFormulario > section > form{
+        font-size: 13px; 
+        height: 750px;
+        background-color: transparent;
+        box-shadow: none;
+    }
+
+    main#mainFormulario > section > form > h1{
+        font-size: 20px;
+        text-align: center;
+        left: 0px;
+    }
+  
+    main#mainFormulario > aside{
+        margin-top: 0px;
+        width: 1000px;
+        background-color: rgba(224, 183, 193, 0.747);
+        box-shadow: none;
+    }
+
+    main#mainFormulario > aside > p{
+        font-size: 13px;
+        margin: 25px;
+    }
+    main#mainFormulario > aside > img{
+        width: 150px;
+        height: 150px;
+    }
+
+    #footerGenerico{
+        font-size: 0px;
+    }
+}
+
+@media (min-width:768px) and (max-width:1200px){
+
+    main#mainFormulario > section{
+        height: 900px;
+        width: 1200px;
+    }
+
+    main#mainFormulario > aside{
+        margin-top: 15px;
+        width: 700px;
+        background-color: rgba(224, 183, 193, 0.747);
+        position: relative;
+        left: 80px;
+        margin-bottom: 35px;
+    }
+
+}
+
+
+//  *********** RESPONSIVE FORMULARIO DE REGISTRO **************** //
+
+@media (min-width:400px) and (max-width:768px){
+
+    main#mainRegister > section{
+        background-color: $backgroundFormColor;
+    }
+
+    main#mainRegister > section > form{
+        background-color: transparent;
+        font-size: 13px; 
+        box-shadow: none;
+    }
+
+    main#mainRegister > section > form > h1{
+        font-size: 20px;
+        text-align: center;
+        left: 0px;
+    }
+
+    main#mainRegister > section > form > label, input{
+        padding: 0px;
+    }
+
+    main#mainRegister > section > form > #botonRegister{
+        width: 100px;
+    }
+
+}
+
+@media (max-width:575px){
+
+    main#mainRegister > section > form > div{
+        position: relative;
+        left: 7px;
+        width: 150px;
+    }
+
+}
+
+//  *********** RESPONSIVE CONTACTO **************** //
+
+@media (min-width: 1200px){
+
+    main#mainContact > aside > iframe{
+        width: 500px;
+        height: 500px;
+    }
+    
+}
+
+@media (min-width:992px) and (max-width: 1200px){
+
+    main#mainContact{
+        display: flex;
+        justify-content: space-around;
+    }
+
+    main#mainContact > aside{
+        width: 400px;
+        height: 400px;
+    }
+
+    main#mainContact > aside > iframe{
+        width: 300px;
+        height: 300px;
+    }
+
+    main#mainContact > section{
+        width: 300px;
+        height: 730px;
+    }
+
+    main#mainContact > section > form{
+        width: 400px;
+    }
+
+    main#mainContact > section > form > h6{
+        width: auto;
+        margin-bottom: 15px;
+    }
+   
+}
+
+@media (min-width:600px) and (max-width:991px){
+
+    main#mainContact > div > #h1Ubicacion{ 
+       padding-left: 1000px;  
+    }
+
+    main#mainContact > div{   
+        height: 100px;
+    }
+
+    main#mainContact > section > form{
+        box-shadow: $boxShadow;
+    }
+
+    main#mainContact > aside{
+        margin-top: 0px;
+        height: 300px;
+        background-color: transparent;
+        box-shadow: none;
+    }
+
+    main#mainContact > aside > iframe{
+        box-shadow: $boxShadow;
+    }
+
+}
+
+@media (max-width:600px){
+
+    main#mainContact > div > #h1Ubicacion{
+        padding-left: 650px;  
+    }
+
+    main#mainContact > div{
+        height: 100px;
+    }
+
+    main#mainContact > section > form{
+        font-size: 15px;
+        width: 400px;
+        box-shadow: $boxShadow;
+    }
+
+    main#mainContact > section > form > input, label{
+        padding: 0px;
+    }
+
+    main#mainContact > section > form > h6{
+        margin-bottom: 25px;
+        width: auto;
+    }
+
+    main#mainContact > aside{
+        margin-top: 0px;
+        height: 300px;
+        background-color: transparent;
+        box-shadow: none;
+    }
+
+    main#mainContact > aside > iframe{
+        box-shadow: $boxShadow;
+    }
+}

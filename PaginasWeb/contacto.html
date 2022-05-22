@@ -19,69 +19,102 @@
 </head>
 <body>
 
-    <header id="headerIndex" class="row">
-
+    <header>
         <img class="col-md-2 col-sm-2 col-lg-1" width="100px" height="80px" src="../img/IconCatWeb.jpg">
-        
-        <nav class="col-md-7 col-sm-8 col-lg-5">
-             
-            <ul>
-                <li><a href="en_adopcion.html">EN ADOPCIÓN</a></li> 
-                <li><a href="registro.html">REGISTRARTE</a></li>
-                <li><a href="../index.html">INICIO</a></li>
-            </ul>  
-        
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid">
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-12">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="en_adopcion.html">EN ADOPCIÓN</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="registro.html">REGISTRARTE</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="../index.html">INICIO</a>
+                </li>
+                </ul>
+            </div>
+            </div>
         </nav>
-        
     </header>
 
-    <main class="row">
+    <main class="row" id="mainContact">
 
-        <section id="contactForm" class="col-md-6 col-sm-6 col-lg-6">
+        <div class="row">
+            <span class="col-md-12 col-sm-12 col-lg-6" id="h1Contacto">
+                <h1>CONTACTO</h1>                
+            </span>
+            <span class="col-md-0 col-sm-0 col-lg-6" id="h1Ubicacion">
+                <h1>DÓNDE ENCONTRARNOS</h1>                
+            </span>
+        </div>
+
+        <section class="col-md-12 col-sm-12 col-lg-6">
         
+            
             <form action="" method="" enctype="">
         
-                <h2>Haz tu consulta aquí</h2>
+                <h6>Para contactarse con nosotros complete el siguiente formulario y seleccione el área a donde quiere dirigirse. Muchas gracias.*</h6>
+                <label for="name">Nombre y apellido*</label>
+                <input type="text" name="name"> 
         
-                <label for="name">Nombre:</label>
-                <input type="text" name="name" placeholder="Ingrese su nombre"> 
+                <label for="email">Email *</label>
+                <input type="email" name="email"> 
         
-                <label for="email">Email:</label>
-                <input type="email" name="email" placeholder="Ingrese su email"> 
+                <label for="tel">Teléfono *</label>
+                <input type="text" name="tel">
+
+                <p class="row" id="areaContacto">
+                    Área de contacto*
+                    <select class="col-md-3 col-sm-3 col-lg-3 col-xs-3">
+                        <option value="Fem">General</option>
+                        <option value="Masc">Donaciones</option>
+                        <option value="Otro">Adopciones</option>
+                        <option value="Otro">Voluntariado</option>
+                        <option value="Otro">otro</option>
+                    </select>
+                </p>
         
-                <label for="tel">Teléfono:</label>
-                <input type="text" name="tel" placeholder="Ingrese su teléfono">
-        
-                <label for="consulta">Consulta:</label> <br>
-                <textarea name="consulta" rows="4" cols="40" placeholder="Ingrese su consulta aquí."></textarea>
+                <label for="consulta">Consulta *</label> <br>
+                <textarea name="consulta" rows="3" cols="50"></textarea>
                     
-                <input id="contactBottom" type="submit" value="Enviar consulta">
+                <input class="col-md-6 col-sm-6 col-lg-6" id="contactBottom" type="submit" value="Enviar consulta">
             
             </form>
         
         </section>            
             
             
-        <aside id="mapsUbi" class="col-md-5 col-sm-6 col-lg-6">
-            <h2>También nos pueden encontrar acá:</h2>
+        <aside class="col-md-12 col-sm-12 col-lg-6">
             <iframe class="iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.9414023383565!2d-58.40861648511204!3d-34.63092106644423!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccb04c9af1881%3A0x374de5a368a9625d!2sLa%20Rioja%201723%2C%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1647187805759!5m2!1ses-419!2sar" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </aside>
 
     </main>
      
     <div id="footerContact" class="row">
-        <section class="col-md-6 col-sm-6 col-lg-6">
+        <section class="col-md-6 col-sm-5 col-lg-6">
             
-            <img class="col-md-3 col-sm-3 col-lg-2" id="logoFooter" width="100px" height="80px" src="../img/IconCatWeb.jpg">
-            <p class="col-md-8 col-sm-7 col-lg-5">ONG de protección animal</p>
-          
-        </section> 
-    
-        <aside class="col-md-6 col-sm-6 col-lg-6">
+            <img class="col-md-3 col-sm-2 col-lg-2" id="logoFooter" width="100px" height="80px" src="../img/IconCatWeb.jpg">
+            
+            <p class="col-md-8 col-sm-12 col-lg-6">
+                © WEBCat 2022<br>
+                ONG de protección animal
+            </p>
 
-            <p class="col-md-7 col-sm-7 col-lg-4">Seguinos en nuestras redes!</p>
+          
+        </section>                    
+    
+        <aside class="col-md-6 col-sm-7 col-lg-6">
+
+            <p class="col-md-7 col-sm-7 col-lg-4">Seguinos en nuestras redes!</p> 
             <img class="col-md-1 col-sm-1 col-lg-1" width="60px" height="40px" src="../img/iconosRedes/Instagram.jpg" alt="@WEBCatIG">
-            <img class="col-md-1 col-sm-1 col-lg-1" width="60px" height="40px" src="../img/iconosRedes/Facebook.jpg" alt=@WEBCatFB">
+            <img class="col-md-1 col-sm-1 col-lg-1" width="60px" height="40px" src="../img/iconosRedes/Facebook.jpg" alt="@WEBCatFB">
             <img class="col-md-1 col-sm-1 col-lg-1" width="60px" height="40px" src="../img/iconosRedes/Twitter.jpg" alt="@WEBCatTW">
     
         </aside>
